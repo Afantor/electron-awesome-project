@@ -1,0 +1,26 @@
+{
+  "name": "electorn-capture-screen",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/Afantor/electron-awesome-project/electorn-capture-screen.git",
+  "author": "Afantor",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "lint": "eslint --fix lib/**/*.js lib/**/*.html",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "babel-eslint": "^10.0.1",
+    "electron-builder": "^20.28.4",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
