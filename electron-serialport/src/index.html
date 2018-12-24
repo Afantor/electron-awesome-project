@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SerialPort Test</title>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <script src="./public/js/flexible.js"></script>
+    <script src="./public/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="body-box">
+        <div class="tool-bar">
+            <div class="select-data">
+                <div class="form-group">
+                    <label for="disabledSelect">串口选择</label>
+                    <select id="disabledSelect" class="form-control com">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="BaudRate">波特率</label>
+                    <input type="text" class="form-control" id="BaudRate" value="115200">
+                </div>
+                <div class="form-group">
+                    <label for="DataBits">数据位</label>
+                    <input type="text" class="form-control" id="DataBits" value="8">
+                </div>
+                <div class="form-group">
+                    <label for="StopBits">停止位</label>
+                    <input type="text" class="form-control" id="StopBits" value="1">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="RTSCheck">
+                    <label class="form-check-label" for="RTSCheck">RTS</label>
+                </div>
+                <br/>
+                <button class="btn btn-primary btn-block btn-submit">打开串口</button>
+                <br/>
+                <button class="btn btn-danger btn-block btn-disconnect">关闭串口</button>                
+            </div>
+            <div class="submit-data">
+
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="receive-box">
+                <div class="send-header">
+                    <label>接收区</label>
+                </div>
+                <div class="receive-windows">
+                </div>
+            </div>
+
+            <div class="send-box">
+                <div class="send-header">
+                    <label>发送区</label>
+                </div>
+                <div class="send-windows">
+                    <textarea class="input-send-data"></textarea>
+                </div>
+                <div class="send-btn">
+                    <div class="btn-box">
+                        <div class="btn btn-warning btn-send">发送信息</div>&nbsp&nbsp&nbsp
+                        <div class="btn btn-danger btn-reset">清空信息</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+<script>
+    require('./serial.js');
+</script>
+  <script>
+    // You can also require other files to run in this process
+    //require('./renderer.js')
+  </script>
+</html>
